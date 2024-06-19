@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TankController : MonoBehaviour
+public class TankController : MonoBehaviour, IDamageble
 {
 	Vector3 moveDir;
 
