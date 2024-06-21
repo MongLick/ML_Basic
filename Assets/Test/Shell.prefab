@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 948639479567079044}
   - component: {fileID: 8878398603275711593}
   - component: {fileID: 8756530111613338110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid: {fileID: 948639479567079044}
   force: 20
+  explosionEffect: {fileID: 195792, guid: 18c6844bd2a9b3f46980deb114b122f2, type: 3}
 --- !u!64 &8756530111613338110
 MeshCollider:
   m_ObjectHideFlags: 0
