@@ -14,6 +14,8 @@ public class TankController : MonoBehaviour
 
 	public AudioSource shootSound;
 
+	public Animator animator;
+
 	Vector3 moveDir;
 
 	public float movePower;
@@ -43,10 +45,10 @@ public class TankController : MonoBehaviour
 	{
 		StartCoroutine(Charging());
 	}
-	
+
 	private void OnZoom(InputValue value)
 	{
-		if(value.isPressed)
+		if (value.isPressed)
 		{
 			zoomCamera.Priority = 100;
 		}
@@ -61,7 +63,7 @@ public class TankController : MonoBehaviour
 		Vector3 forceDir = transform.forward * moveDir.z;
 		rigid.AddForce(forceDir * movePower, ForceMode.Force);
 
-		if(rigid.velocity.magnitude > maxSpeed)
+		if (rigid.velocity.magnitude > maxSpeed)
 		{
 			rigid.velocity = rigid.velocity.normalized * maxSpeed;
 		}
@@ -78,6 +80,7 @@ public class TankController : MonoBehaviour
 		Bullet bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 		bullet.force = bulletForce;
 		shootSound.Play();
+		animator.SetTrigger("Fire");
 	}
 
 	IEnumerator Charging()
@@ -93,7 +96,7 @@ public class TankController : MonoBehaviour
 	{
 		Rotate();
 
-		if(Check)
+		if (Check)
 		{
 			bulletForce += Time.deltaTime * 2;
 			Debug.Log(bulletForce);

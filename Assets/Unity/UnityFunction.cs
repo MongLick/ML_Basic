@@ -65,7 +65,7 @@ public class UnityFunction : MonoBehaviour
 	private void ComponentFunction()
 	{
 		// <컴포넌트 추가>
-		addComponent = gameObject.AddComponent<Rigidbody>();
+		// addComponent = gameObject.AddComponent<Rigidbody>(); 이걸로 하면 되는데 중복으로 오류떠서 일단 문자취급. 
 		newComponent = new Rigidbody(); // 아예 안 되는 문법 의미가 없음, 컴포넌트는 게임오브젝트에 부착되어 동작할 때 의미가 있음.
 
 		// <컴포넌트 삭제>

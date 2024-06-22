@@ -246,6 +246,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "90e28902-b922-4195-82bc-e2aea6997d55",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "KeyBoard(AD)",
                     "id": "f366eff5-0e9a-4f55-a284-cdffe3cd8d81",
                     "path": "2DVector",
@@ -329,7 +340,7 @@
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
+                    "name": "KeyBoard(Arrow)",
                     "id": "58b8149c-dbfa-4189-8a55-0e4fadb37570",
                     "path": "2DVector",
                     "interactions": "",
@@ -380,6 +391,89 @@
                     "processors": "",
                     "groups": "",
                     "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "New action map",
+            "id": "487d0104-086c-4eb6-8c3f-ea7c6fad7c12",
+            "actions": [
+                {
+                    "name": "Move1",
+                    "type": "PassThrough",
+                    "id": "2dd4b65b-d37c-40f1-97c5-6c5b1de4c642",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cb33785b-c451-47f1-8964-6fbae339ab47",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "6ddfc006-8104-49f1-9b07-09bf93386678",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move1",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "a4f26dcc-0428-4e6f-bcc2-7615a51b77b6",
+                    "path": "<Keyboard>/numpad8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move1",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "17710957-03a4-475f-acf7-8cf335f42148",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move1",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "139a80d2-6aec-4d63-8e51-476de3f256c5",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move1",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "7f1496ff-469b-45ca-8f4a-136e99d5e119",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move1",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
