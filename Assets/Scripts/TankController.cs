@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class TankController : MonoBehaviour
@@ -12,9 +13,8 @@ public class TankController : MonoBehaviour
 
 	public CinemachineVirtualCamera zoomCamera;
 
-	public AudioSource shootSound;
-
-	public Animator animator;
+	public UnityEvent OnFiring;
+	public UnityEvent OnFired;
 
 	Vector3 moveDir;
 
@@ -77,10 +77,13 @@ public class TankController : MonoBehaviour
 
 	private void Fire()
 	{
+		OnFiring?.Invoke();
+
 		Bullet bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 		bullet.force = bulletForce;
-		shootSound.Play();
-		animator.SetTrigger("Fire");
+		Manager.Data.FireCount++;
+
+		OnFired?.Invoke();
 	}
 
 	IEnumerator Charging()
